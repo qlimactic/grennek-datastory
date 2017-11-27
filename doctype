@@ -5,6 +5,13 @@
 <title>Thet title of your page goes here</title>
 </head>
 <body>
-Bulk of your content here.
+<article id="datastory">
+<section id="personal-digital">
+</section>
+<section id="social-digital">
+</section>
+</article>
+<footer id="sources">
+</footer>
 </body>
 </html>
