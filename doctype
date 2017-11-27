@@ -7,11 +7,30 @@
 <body>
 <article id="datastory">
 <section id="personal-digital">
+
+<h1>Personal Digital Data</h1>
+<p>
+Here is a placeholder paragraph, and I should <em>emphasize something</em>.
+</p>
+
 </section>
 <section id="social-digital">
+
+<h1>Social Digital Data</h1>
+<p>Here is a placeholder paragraph.</p>
+
 </section>
 </article>
-<footer id="sources">
+<footer id="resources">
+
+<ul>
+<li>
+<a href="http://www.google.com" target="_blank">
+Resource 1</a>
+</li>
+<li>Resource 2</li>
+</ul>
+
 </footer>
 </body>
 </html>
