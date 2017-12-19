@@ -1,0 +1,156 @@
+/* BASIC STYLES FOR EACH DIV */
+
+section#personal div,
+section#datacollection div,
+section#dataviz div,
+section#resources div {
+    min-height: 250px;
+    margin-bottom: 15px;
+}
+/* Specific styles for different Divs */
+
+section#personal div {
+    background: #573544;
+    color: white;
+    font-size: 32px;
+    border-style: groove;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+section#datacollection div {
+    background: #8CBEB2;
+    color: black;
+    font-size: 32px;
+    border-style: dotted;
+    border-color: red;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+section#dataviz div {
+    margin: auto;
+    background: gray;
+    color: maroon;
+    font-size: 32px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-style: solid;
+    border-color: green;
+    border-width: 3px;
+}
+section#resources div {
+    background: #0000A0;
+    font-size: 32px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+/* GRID/LAYOUT STYLES - ensures the size of the screen won't mess with formatting */
+
+section#personal {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+section#dataviz {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr))
+}
+section#datacollection {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 2fr))
+}
+/* body of the webpage and helps to define its style and font and background */
+
+body {
+    font-size: 20px;
+    color: orange;
+    font-family: "Calibri";
+    background-color: black;
+}
+/* Setting the font for the heading texts */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Helvetica";
+}
+/* Media query for #personal & #datacollection & #dataviz */
+
+img {
+    margin: auto;
+    max-width: 97.5%;
+    height: auto;
+    width: 100%;
+    position: relative;
+    border: solid;
+}
+/* Identifies the type of screen that's viewing the webpage */
+
+@media screen and (min-width: 1080px) {
+    section#personal {
+        grid-template-columns: 40% 2fr;
+    }
+    section#datacollection {
+        grid-template-columns: 2fr 40%;
+    }
+    section#dataviz {
+        grid-template-columns: 40% 2fr;
+    }
+}
+/*
+  Query for datacollection grid track.
+  Used element inspector to find
+  the 670px breaking point.
+
+  Query asks: If user is on a screen
+    and the screen is less than 670px,
+    then use the styles within.
+*/
+
+@media screen and (max-width: 670px) {
+    section#datacollection div.content-wrapper {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    section#datacollection div.media-wrapper {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    section#dataviz div.media-wrapper {
+        grid-row: 1;
+        grid-column: 2;
+    }
+}
+/* Additional formatting code for the webpage */
+
+div.media-wrapper {
+    align-self: center;
+}
+div.media-wrapper img {
+    overflow: hidden;
+}
+/* Helps to create a specific kind of embedded video */
+
+.video-container {
+    position: relative;
+    width: 60%;
+}
+.responsive-iframe {
+    position: relative;
+    padding-bottom: 35%;
+    /*16:9*/
+
+    padding-top: 3%;
+    height: 0;
+    overflow: hidden;
+    iframe {
+        margin: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
